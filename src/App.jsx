@@ -29,21 +29,22 @@ function App() {
 
   return (
     <>
-    <div>
-     <Toaster/>
-      <section className="">
-       
-        <h1>Simple CRUD</h1>
-        <form onSubmit={handleAddUser} className="">
-          <input  type="text" name="name" id="" /> <br />
-          <input type="email" name="email" id="" /> <br />
-          <input type="submit" value="add user" />
-        </form>
-      </section>
-      
       <div>
-       <Users></Users>
-      </div>
+        <Toaster />
+        <section className="flex flex-col items-center">
+          <div className="my-12 ">
+            <h1 className="font-bold text-xl">Simple CRUD</h1>
+          </div>
+          <form onSubmit={handleAddUser} className="">
+            <input className="border border-gray-500 rounded-md mb-2 " type="text" name="name" id="" /> <br />
+            <input className="border border-gray-500 rounded-md mb-2 " type="email" name="email" id="" /> <br />
+            <input className="border flex mx-auto border-gray-500 cursor-pointer hover:bg-gray-200  px-2 rounded-md " type="submit" value="add user" />
+          </form>
+        </section>
+
+        <div>
+          <Users></Users>
+        </div>
       </div>
     </>
   );
